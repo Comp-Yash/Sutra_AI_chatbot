@@ -4,6 +4,7 @@ requests
 
 # AI and Memory components
 openai
+mem0>=0.1.0
 agno>=0.1.0
 
 # Translation
