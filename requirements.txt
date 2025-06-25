@@ -4,7 +4,7 @@ requests
 
 # AI and Memory components
 openai
-mem0>=0.1.0
+git+https://github.com/mem0ai/mem0.git
 agno>=0.1.0
 
 # Translation
