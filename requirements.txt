@@ -1,20 +1,6 @@
-# Core dependencies
 streamlit
 requests
-
-# AI and Memory components
-openai
-git+https://github.com/mem0ai/mem0.git
-agno
-
-# Translation
 googletrans
-
-# Optional: For better error handling and logging
-loguru
-
-# Optional: For enhanced JSON handling
-ujson
-
-# Optional: For better HTTP session management
-httpx
+openai
+mem0ai
+agno
