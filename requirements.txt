@@ -5,7 +5,7 @@ requests
 # AI and Memory components
 openai
 git+https://github.com/mem0ai/mem0.git
-git+https://github.com/agno-agi/agno.git
+agno
 
 # Translation
 googletrans
