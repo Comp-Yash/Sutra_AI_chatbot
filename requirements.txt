@@ -1,6 +1,20 @@
+# Core dependencies
 streamlit
 requests
-googletrans
-openai
+
+# AI and Memory components
 mem0
 agno
+openai
+
+# Translation
+googletrans
+
+# Optional: For better error handling and logging
+loguru
+
+# Optional: For enhanced JSON handling
+ujson
+
+# Optional: For better HTTP session management
+httpx
