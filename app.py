@@ -93,16 +93,16 @@ if AGNO_AVAILABLE:
         st.error(f"Failed to initialize Agno agent: {str(e)}")
         mentor_agent = None
 
-# --- SUPPORTED LANGUAGES (Fixed typos) ---
+# --- SUPPORTED LANGUAGES ---
 language_map = {
     "English": "english",
     "Hindi": "hindi", 
     "Marathi": "marathi",
     "Gujarati": "gujarati",
     "Tamil": "tamil",
-    "Telugu": "telugu",  # Fixed from "telgu"
-    "Kannada": "kannada",  # Fixed from "kanada"
-    "Punjabi": "punjabi",  # Fixed from "panjabi"
+    "Telugu": "telugu",  
+    "Kannada": "kannada",  
+    "Punjabi": "punjabi",  
     "Bihari": "bihari"
 }
 
