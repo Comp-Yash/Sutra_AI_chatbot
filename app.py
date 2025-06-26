@@ -13,23 +13,28 @@ st.markdown("""
     /* Import Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     
-    /* Main app background - exact match to reference */
+    /* Main app background - pure black */
     .stApp {
-        background: #1a1a23;
+        background: #000000 !important;
         color: #ffffff;
         font-family: 'Inter', sans-serif;
     }
     
-    /* Sidebar styling - exact match */
-    .css-1d391kg, .css-1cypcdb {
-        background: #2a2a3a !important;
-        border-right: 1px solid #3a3a4a;
+    /* Sidebar styling - pure black */
+    .css-1d391kg, .css-1cypcdb, .css-1aumxhk {
+        background: #000000 !important;
+        border-right: 1px solid #1a1a1a;
     }
     
-    /* Sidebar content */
-    .css-17eq0hr {
-        background: #2a2a3a;
+    /* Sidebar content - pure black */
+    .css-17eq0hr, [data-testid="stSidebar"] > div, [data-testid="stSidebar"] {
+        background: #000000 !important;
         color: #ffffff;
+    }
+    
+    /* Force all sidebar elements to black background */
+    .css-1aumxhk, .css-k1vhr4, .element-container {
+        background: #000000 !important;
     }
     
     /* SUTRA logo styling */
@@ -42,6 +47,7 @@ st.markdown("""
         font-weight: 700;
         color: #4a9eff;
         margin-bottom: 1.5rem;
+        background: #000000 !important;
     }
     
     .sutra-icon {
@@ -57,11 +63,11 @@ st.markdown("""
         font-weight: bold;
     }
     
-    /* Main title styling - exact match */
+    /* Main title styling - pure black background */
     .main-title-container {
         text-align: center;
         padding: 3rem 0 2rem 0;
-        background: linear-gradient(135deg, #1a1a23 0%, #2a2a3a 100%);
+        background: #000000 !important;
         margin-bottom: 2rem;
     }
     
@@ -74,6 +80,7 @@ st.markdown("""
         align-items: center;
         justify-content: center;
         gap: 1rem;
+        background: #000000 !important;
     }
     
     .main-subtitle {
@@ -81,6 +88,7 @@ st.markdown("""
         color: #9ca3af;
         font-weight: 400;
         margin-bottom: 1rem;
+        background: #000000 !important;
     }
     
     .main-description {
@@ -89,19 +97,21 @@ st.markdown("""
         max-width: 600px;
         margin: 0 auto;
         line-height: 1.6;
+        background: #000000 !important;
     }
     
-    /* Robot icon styling */
+    /* Robot icon styling - removed white background */
     .robot-icon {
         width: 80px;
         height: 80px;
-        background: linear-gradient(135deg, #ff6b9d 0%, #c471ed 50%, #12d8fa 100%);
+        background: #000000 !important;
         border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 2rem auto;
         font-size: 2rem;
+        border: 2px solid #4a9eff;
     }
     
     /* API Configuration section */
@@ -113,11 +123,12 @@ st.markdown("""
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        background: #000000 !important;
     }
     
-    /* Input styling - exact match */
+    /* Input styling - pure black theme */
     .stTextInput > div > div > input {
-        background: #3a3a4a !important;
+        background: #1a1a1a !important;
         color: white !important;
         border: 1px solid #4a4a5a !important;
         border-radius: 8px !important;
@@ -140,6 +151,7 @@ st.markdown("""
         gap: 0.5rem;
         margin-top: 0.5rem;
         transition: color 0.2s ease;
+        background: #000000 !important;
     }
     
     .api-link:hover {
@@ -147,9 +159,9 @@ st.markdown("""
         text-decoration: underline;
     }
     
-    /* Warning/Alert styling - exact match */
+    /* Warning/Alert styling - black background */
     .api-warning {
-        background: rgba(146, 64, 14, 0.2);
+        background: rgba(146, 64, 14, 0.2) !important;
         border: 1px solid #92400e;
         border-radius: 8px;
         padding: 1rem;
@@ -159,7 +171,7 @@ st.markdown("""
     }
     
     .api-required-alert {
-        background: rgba(185, 28, 28, 0.2);
+        background: rgba(185, 28, 28, 0.2) !important;
         border: 1px solid #b91c1c;
         border-radius: 8px;
         padding: 1.5rem;
@@ -186,6 +198,7 @@ st.markdown("""
     /* Language selection */
     .language-section {
         margin: 2rem 0;
+        background: #000000 !important;
     }
     
     .language-title {
@@ -196,11 +209,12 @@ st.markdown("""
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        background: #000000 !important;
     }
     
-    /* Selectbox styling */
+    /* Selectbox styling - black theme */
     .stSelectbox > div > div {
-        background: #3a3a4a !important;
+        background: #1a1a1a !important;
         border: 1px solid #4a4a5a !important;
         border-radius: 8px !important;
         color: white !important;
@@ -208,14 +222,15 @@ st.markdown("""
     
     .stSelectbox > div > div > select {
         color: white !important;
-        background: #3a3a4a !important;
+        background: #1a1a1a !important;
     }
     
-    /* Chat message styling */
+    /* Chat message styling - pure black */
     .chat-container {
         max-width: 800px;
         margin: 0 auto;
         padding: 2rem 1rem;
+        background: #000000 !important;
     }
     
     .chat-message {
@@ -226,7 +241,7 @@ st.markdown("""
     }
     
     .user-message {
-        background: #4a9eff;
+        background: #4a9eff !important;
         color: white;
         margin-left: auto;
         margin-right: 0;
@@ -234,7 +249,7 @@ st.markdown("""
     }
     
     .assistant-message {
-        background: #3a3a4a;
+        background: #1a1a1a !important;
         color: #ffffff;
         margin-right: auto;
         margin-left: 0;
@@ -258,9 +273,9 @@ st.markdown("""
         transform: translateY(-1px);
     }
     
-    /* Chat input styling */
+    /* Chat input styling - black theme */
     .stChatInput > div {
-        background: #3a3a4a !important;
+        background: #1a1a1a !important;
         border: 1px solid #4a4a5a !important;
         border-radius: 12px !important;
     }
@@ -276,24 +291,46 @@ st.markdown("""
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Sidebar header */
+    /* Sidebar header - pure black */
     .sidebar-header {
         padding: 0 0 1rem 0;
         border-bottom: 1px solid #3a3a4a;
         margin-bottom: 1.5rem;
+        background: #000000 !important;
     }
     
-    /* No chat state */
+    /* No chat state - black background */
     .no-chat-state {
         text-align: center;
         padding: 3rem 2rem;
         color: #6b7280;
+        background: #000000 !important;
     }
     
     .no-chat-icon {
         font-size: 4rem;
         margin-bottom: 1rem;
         color: #4a5568;
+    }
+    
+    /* Force black background on all elements */
+    .main, .block-container, .element-container, .stMarkdown {
+        background: #000000 !important;
+    }
+    
+    /* Ensure sidebar stays black */
+    [data-testid="stSidebar"] > div:first-child {
+        background: #000000 !important;
+    }
+    
+    /* Fix any remaining white backgrounds */
+    .css-10trblm, .css-1629p8f, .css-16huue1, .css-1d391kg {
+        background: #000000 !important;
+    }
+    
+    /* Column containers black */
+    .css-ocqkz7, .css-1kyxreq {
+        background: #000000 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -337,19 +374,20 @@ except ImportError:
 with st.sidebar:
     # SUTRA Logo and Title
     st.markdown(f"""
-<div class="sidebar-header" style="text-align: center;">
-    <img src="data:image/jpeg;base64,{base64.b64encode(open("logo.jpg", "rb").read()).decode()}"
-         style="width: 60px; height: 60px; border-radius: 12px; margin-bottom: 10px;" />
+<div class="sidebar-header" style="text-align: center; background: #000000 !important;">
+    <img src="data:image/jpeg;base64,{base64.b64encode(open("sutra_logo_pad.png", "rb").read()).decode()}"
+         style="width: 200px; height: 100px; border-radius: 12px; margin-bottom: 10px; background: #000000;" />
 </div>
+
 """, unsafe_allow_html=True)
 
     st.markdown("""
-    <div class="sidebar-header">
+    <div class="sidebar-header" style="background: #000000 !important;">
         <div class="sutra-logo">
             <div class="sutra-icon">🔗</div>
             <span>CHAT SUTRA</span>
         </div>
-        <div style="color: #9ca3af; font-size: 0.9rem;">AI Friend Chatbot</div>
+        <div style="color: #9ca3af; font-size: 0.9rem; background: #000000;">AI Friend Chatbot</div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -618,14 +656,22 @@ def chat_with_sutra_agent(user_message):
 # --- MAIN CONTENT AREA ---
 
 # Main header section
+st.markdown(f"""
+<div class="main-title-container" style="background: #000000 !important;">
+    <div style="background: #000000 !important; padding: 0; text-align: center;">
+    <img src="data:image/jpeg;base64,{base64.b64encode(open("logo_bg.png", "rb").read()).decode()}"
+         style="width: 200px; height: 200px; background: #000000 !important; border: none; border-radius: 0px; margin: 0 auto; display: block; box-shadow: none;" />
+</div>
+</div>
+""", unsafe_allow_html=True)
+
 st.markdown("""
-<div class="main-title-container">
-    <div class="robot-icon">🤖</div>
+<div style="background: #000000 !important;">
     <div class="main-title">
         <div class="sutra-icon">🔗</div>
         SUTRA AI Friend
     </div>
-    <div class="main-subtitle">AI Mentor & Friend Chatbot</div>
+    <div class="main-subtitle" style="text-align: center;">AI Mentor & Friend Chatbot</div>
     <div class="main-description">
         Chat with your personal AI mentor and friend in multiple languages using advanced AI capabilities.
     </div>
@@ -700,12 +746,3 @@ else:
     with col2:
         if st.button("🔄 Refresh"):
             st.rerun()
-
-
-
-
-
-
-
-
-
