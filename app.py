@@ -744,18 +744,4 @@ else:
         # Rerun to update the display
         st.rerun()
     
-    # Action buttons with updated styling
-    col1, col2, col3 = st.columns([1, 1, 2])
-    with col1:
-        st.markdown('<div class="action-button">', unsafe_allow_html=True)
-        if st.button("🗑️ Clear Chat"):
-            st.session_state.chat_history = []
-            st.success("Chat history cleared!")
-            st.rerun()
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown('<div class="action-button">', unsafe_allow_html=True)
-        if st.button("🔄 Refresh"):
-            st.rerun()
-        st.markdown('</div>', unsafe_allow_html=True)
+    # Action buttons removed as requested
