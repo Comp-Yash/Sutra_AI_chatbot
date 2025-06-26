@@ -37,29 +37,29 @@ st.markdown("""
         background: #000000 !important;
     }
     
-    /* SUTRA logo styling */
+    /* SUTRA logo styling - compact */
     .sutra-logo {
         display: flex;
         align-items: center;
-        gap: 12px;
-        padding: 1rem 0;
-        font-size: 1.5rem;
+        gap: 8px;
+        padding: 0.5rem 0;
+        font-size: 1.2rem;
         font-weight: 700;
         color: #4a9eff;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.8rem;
         background: #000000 !important;
     }
     
     .sutra-icon {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         background: #4a9eff;
-        border-radius: 6px;
+        border-radius: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: bold;
     }
     
@@ -114,26 +114,27 @@ st.markdown("""
         border: 2px solid #4a9eff;
     }
     
-    /* API Configuration section */
+    /* API Configuration section - compact */
     .api-section-title {
         color: #fbbf24;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
-        margin: 1.5rem 0 1rem 0;
+        margin: 1rem 0 0.5rem 0;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
         background: #000000 !important;
     }
     
-    /* Input styling - pure black theme */
+    /* Input styling - compact */
     .stTextInput > div > div > input {
         background: #1a1a1a !important;
         color: white !important;
         border: 1px solid #4a4a5a !important;
-        border-radius: 8px !important;
-        padding: 0.75rem !important;
+        border-radius: 6px !important;
+        padding: 0.5rem !important;
         font-family: 'Inter', sans-serif !important;
+        font-size: 0.9rem !important;
     }
     
     .stTextInput > div > div > input:focus {
@@ -141,15 +142,15 @@ st.markdown("""
         box-shadow: 0 0 0 1px #4a9eff !important;
     }
     
-    /* API link styling */
+    /* API link styling - compact */
     .api-link {
         color: #4a9eff;
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        margin-top: 0.5rem;
+        gap: 0.3rem;
+        margin-top: 0.3rem;
         transition: color 0.2s ease;
         background: #000000 !important;
     }
@@ -159,17 +160,7 @@ st.markdown("""
         text-decoration: underline;
     }
     
-    /* Warning/Alert styling - black background */
-    .api-warning {
-        background: rgba(146, 64, 14, 0.2) !important;
-        border: 1px solid #92400e;
-        border-radius: 8px;
-        padding: 1rem;
-        margin: 1rem 0;
-        color: #fbbf24;
-        font-size: 0.9rem;
-    }
-    
+    /* Warning/Alert styling - compact - REMOVED API WARNING */
     .api-required-alert {
         background: rgba(185, 28, 28, 0.2) !important;
         border: 1px solid #b91c1c;
@@ -195,37 +186,39 @@ st.markdown("""
         font-size: 0.95rem;
     }
     
-    /* Language selection */
+    /* Language selection - compact */
     .language-section {
-        margin: 2rem 0;
+        margin: 1rem 0;
         background: #000000 !important;
     }
     
     .language-title {
         color: #06b6d4;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
         background: #000000 !important;
     }
     
-    /* Selectbox styling - black theme */
+    /* Selectbox styling - compact */
     .stSelectbox > div > div {
         background: #1a1a1a !important;
         border: 1px solid #4a4a5a !important;
-        border-radius: 8px !important;
+        border-radius: 6px !important;
         color: white !important;
+        min-height: 2.5rem !important;
     }
     
     .stSelectbox > div > div > select {
         color: white !important;
         background: #1a1a1a !important;
+        font-size: 0.9rem !important;
     }
     
-    /* Chat message styling - pure black */
+    /* Chat message styling - LEFT ALIGNED AND BLACK USER MESSAGES */
     .chat-container {
         max-width: 800px;
         margin: 0 auto;
@@ -238,29 +231,32 @@ st.markdown("""
         border-radius: 12px;
         margin: 1rem 0;
         max-width: 85%;
+        /* REMOVED: margin-left: auto and margin-right properties for left alignment */
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        text-align: left !important;
     }
     
+    /* CHANGED: User message now has black background instead of blue */
     .user-message {
-        background: #4a9eff !important;
-        color: white;
-        margin-left: auto;
-        margin-right: 0;
-        text-align: right;
+        background: #1a1a1a !important;
+        color: #ffffff !important;
+        border: 1px solid #4a4a5a;
+        /* REMOVED: margin-left: auto and text-align: right */
     }
     
     .assistant-message {
-        background: #1a1a1a !important;
+        background: #2a2a2a !important;
         color: #ffffff;
-        margin-right: auto;
-        margin-left: 0;
         border: 1px solid #4a4a5a;
+        /* REMOVED: margin-right: auto and margin-left: 0 */
     }
     
-    /* Button styling */
+    /* Button styling - UPDATED FOR CLEAR AND REFRESH BUTTONS */
     .stButton > button {
-        background: #4a9eff !important;
-        color: white !important;
-        border: none !important;
+        background: #000000 !important;
+        color: #ffffff !important;
+        border: 1px solid #4a4a5a !important;
         border-radius: 8px !important;
         padding: 0.75rem 1.5rem !important;
         font-weight: 500 !important;
@@ -269,7 +265,26 @@ st.markdown("""
     }
     
     .stButton > button:hover {
-        background: #3b82f6 !important;
+        background: #1a1a1a !important;
+        border-color: #6a6a7a !important;
+        transform: translateY(-1px);
+    }
+    
+    /* Special styling for action buttons (Clear/Refresh) */
+    .action-button button {
+        background: #000000 !important;
+        color: #ffffff !important;
+        border: 1px solid #4a4a5a !important;
+        border-radius: 8px !important;
+        padding: 0.75rem 1.5rem !important;
+        font-weight: 500 !important;
+        font-family: 'Inter', sans-serif !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    .action-button button:hover {
+        background: #1a1a1a !important;
+        border-color: #6a6a7a !important;
         transform: translateY(-1px);
     }
     
@@ -291,11 +306,11 @@ st.markdown("""
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Sidebar header - pure black */
+    /* Sidebar header - compact */
     .sidebar-header {
-        padding: 0 0 1rem 0;
+        padding: 0 0 0.5rem 0;
         border-bottom: 1px solid #3a3a4a;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.8rem;
         background: #000000 !important;
     }
     
@@ -372,11 +387,11 @@ except ImportError:
 
 # --- SIDEBAR CONFIGURATION ---
 with st.sidebar:
-    # SUTRA Logo and Title
+    # SUTRA Logo and Title - Compact
     st.markdown(f"""
 <div class="sidebar-header" style="text-align: center; background: #000000 !important;">
-    <img src="data:image/jpeg;base64,{base64.b64encode(open("sutra_logo_pad.png", "rb").read()).decode()}"
-         style="width: 200px; height: 100px; border-radius: 12px; margin-bottom: 10px; background: #000000;" />
+    <img src="data:image/jpeg;base64,{base64.b64encode(open("sutra_logo.png", "rb").read()).decode()}"
+         style="width: 150px; height: 80px; border-radius: 8px; margin-bottom: 5px; background: #000000;" />
 </div>
 
 """, unsafe_allow_html=True)
@@ -387,7 +402,7 @@ with st.sidebar:
             <div class="sutra-icon">🔗</div>
             <span>CHAT SUTRA</span>
         </div>
-        <div style="color: #9ca3af; font-size: 0.9rem; background: #000000;">AI Friend Chatbot</div>
+        <div style="color: #9ca3af; font-size: 0.8rem; background: #000000;">AI Friend Chatbot</div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -395,9 +410,9 @@ with st.sidebar:
     # API Configuration
     st.markdown('<div class="api-section-title">🔧 API Configuration</div>', unsafe_allow_html=True)
     
-    # Sutra API Key input
+    # Sutra API Key input - Compact
     sutra_api_key = st.text_input(
-        "Enter your SUTRA API Key", 
+        "SUTRA API Key", 
         value="",
         type="password",
         help="Enter your Sutra AI API key",
@@ -408,17 +423,11 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     
-    # Show warning if no API key
-    if not sutra_api_key:
-        st.markdown(
-            '<div class="api-warning">⚠️ Please enter your Sutra API key to use the app</div>', 
-            unsafe_allow_html=True
-        )
+    # REMOVED: API key warning to avoid scrolling issues
     
-    # Mem0 API Key input
-    st.markdown("---")
+    # Mem0 API Key input - Compact
     mem0_api_key = st.text_input(
-        "Enter your MEM0 API Key (Optional)", 
+        "MEM0 API Key (Optional)", 
         value="",
         type="password",
         help="Enter your Mem0 API key for memory features",
@@ -445,7 +454,7 @@ with st.sidebar:
     }
     
     lang_choice = st.selectbox(
-        "Choose your language / अपनी भाषा चुनें", 
+        "Language / भाषा", 
         list(language_map.keys()),
         index=0
     )
@@ -735,14 +744,18 @@ else:
         # Rerun to update the display
         st.rerun()
     
-    # Action buttons
+    # Action buttons with updated styling
     col1, col2, col3 = st.columns([1, 1, 2])
     with col1:
+        st.markdown('<div class="action-button">', unsafe_allow_html=True)
         if st.button("🗑️ Clear Chat"):
             st.session_state.chat_history = []
             st.success("Chat history cleared!")
             st.rerun()
+        st.markdown('</div>', unsafe_allow_html=True)
     
     with col2:
+        st.markdown('<div class="action-button">', unsafe_allow_html=True)
         if st.button("🔄 Refresh"):
             st.rerun()
+        st.markdown('</div>', unsafe_allow_html=True)
