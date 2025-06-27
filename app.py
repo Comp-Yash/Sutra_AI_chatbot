@@ -20,23 +20,6 @@ st.markdown("""
         font-family: 'Inter', sans-serif;
     }
     
-    /* Sidebar styling - pure black */
-    .css-1d391kg, .css-1cypcdb, .css-1aumxhk {
-        background: #000000 !important;
-        border-right: 1px solid #1a1a1a;
-    }
-    
-    /* Sidebar content - pure black */
-    .css-17eq0hr, [data-testid="stSidebar"] > div, [data-testid="stSidebar"] {
-        background: #000000 !important;
-        color: #ffffff;
-    }
-    
-    /* Force all sidebar elements to black background */
-    .css-1aumxhk, .css-k1vhr4, .element-container {
-        background: #000000 !important;
-    }
-    
     /* SUTRA logo styling - compact */
     .sutra-logo {
         display: flex;
@@ -47,7 +30,6 @@ st.markdown("""
         font-weight: 700;
         color: #4a9eff;
         margin-bottom: 0.8rem;
-        background: #000000 !important;
     }
     
     .sutra-icon {
@@ -123,7 +105,6 @@ st.markdown("""
         display: flex;
         align-items: center;
         gap: 0.4rem;
-        background: #000000 !important;
     }
     
     /* Input styling - compact */
@@ -152,7 +133,6 @@ st.markdown("""
         gap: 0.3rem;
         margin-top: 0.3rem;
         transition: color 0.2s ease;
-        background: #000000 !important;
     }
     
     .api-link:hover {
@@ -189,7 +169,6 @@ st.markdown("""
     /* Language selection - compact */
     .language-section {
         margin: 1rem 0;
-        background: #000000 !important;
     }
     
     .language-title {
@@ -200,7 +179,6 @@ st.markdown("""
         display: flex;
         align-items: center;
         gap: 0.4rem;
-        background: #000000 !important;
     }
     
     /* Selectbox styling - compact */
@@ -306,14 +284,6 @@ st.markdown("""
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Sidebar header - compact */
-    .sidebar-header {
-        padding: 0 0 0.5rem 0;
-        border-bottom: 1px solid #3a3a4a;
-        margin-bottom: 0.8rem;
-        background: #000000 !important;
-    }
-    
     /* No chat state - black background */
     .no-chat-state {
         text-align: center;
@@ -328,18 +298,8 @@ st.markdown("""
         color: #4a5568;
     }
     
-    /* Force black background on all elements */
-    .main, .block-container, .element-container, .stMarkdown {
-        background: #000000 !important;
-    }
-    
-    /* Ensure sidebar stays black */
-    [data-testid="stSidebar"] > div:first-child {
-        background: #000000 !important;
-    }
-    
-    /* Fix any remaining white backgrounds */
-    .css-10trblm, .css-1629p8f, .css-16huue1, .css-1d391kg {
+    /* Force black background on main content areas only */
+    .main, .block-container {
         background: #000000 !important;
     }
     
@@ -389,20 +349,20 @@ except ImportError:
 with st.sidebar:
     # SUTRA Logo and Title - Compact
     st.markdown(f"""
-<div class="sidebar-header" style="text-align: center; background: #000000 !important;">
+<div style="text-align: center;">
     <img src="https://framerusercontent.com/images/3Ca34Pogzn9I3a7uTsNSlfs9Bdk.png"
-         style="width: 210px; height: 80px; border-radius: 8px; margin-bottom: 5px; background: #000000;" />
+         style="width: 210px; height: 80px; border-radius: 8px; margin-bottom: 5px;" />
 </div>
 
 """, unsafe_allow_html=True)
 
     st.markdown("""
-    <div class="sidebar-header" style="background: #000000 !important;">
+    <div>
         <div class="sutra-logo">
             <div class="sutra-icon">🔗</div>
             <span>CHAT SUTRA</span>
         </div>
-        <div style="color: #9ca3af; font-size: 0.8rem; background: #000000;">AI Friend Chatbot</div>
+        <div style="color: #9ca3af; font-size: 0.8rem;">AI Friend Chatbot</div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -700,20 +660,39 @@ if not SUTRA_API_KEY:
 else:
     # Chat interface
     st.markdown('<div class="chat-container">', unsafe_allow_html=True)
-    
-    # Display chat history
+
+# Display chat history
     if st.session_state.chat_history:
         for i, msg in enumerate(st.session_state.chat_history):
             if msg["role"] == "user":
                 st.markdown(
-                    f'<div class="chat-message user-message"><strong>You:</strong> {msg["content"]}</div>', 
+                    f"""
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                        <div style="width: 36px; height: 36px; background-color: #f87171; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="black">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <div style="background-color: #1f2937; color: white; padding: 12px 16px; border-radius: 12px; max-width: 80%;">
+                            {msg["content"]}
+                        </div>
+                    </div>
+                    """,
                     unsafe_allow_html=True
                 )
             else:
                 st.markdown(
-                    f'<div class="chat-message assistant-message"><strong>Sutra:</strong> {msg["content"]}</div>', 
-                    unsafe_allow_html=True
-                )
+                f'''
+                <div style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                    <img src="https://framerusercontent.com/images/9vH8BcjXKRcC5OrSfkohhSyDgX0.png" width="36" height="36" style="margin-right: 10px; border-radius: 50%;" />
+                    <div style="background-color: #111827; color: white; padding: 12px 16px; border-radius: 12px; max-width: 80%;">
+                        {msg["content"]}
+                    </div>
+                </div>
+                ''',
+                unsafe_allow_html=True
+            )
+
     else:
         # No chat state
         st.markdown("""
@@ -723,8 +702,9 @@ else:
             <p style="color: #6b7280;">Type a message below to begin chatting with your AI mentor and friend.</p>
         </div>
         """, unsafe_allow_html=True)
-    
+
     st.markdown('</div>', unsafe_allow_html=True)
+
     
     # Chat input
     user_input = st.chat_input("Type your message here... / यहाँ अपना संदेश टाइप करें...")
