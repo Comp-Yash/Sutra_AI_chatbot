@@ -390,8 +390,8 @@ with st.sidebar:
     # SUTRA Logo and Title - Compact
     st.markdown(f"""
 <div class="sidebar-header" style="text-align: center; background: #000000 !important;">
-    <img src="data:image/jpeg;base64,{base64.b64encode(open("sutra_logo.png", "rb").read()).decode()}"
-         style="width: 150px; height: 80px; border-radius: 8px; margin-bottom: 5px; background: #000000;" />
+    <img src="https://framerusercontent.com/images/3Ca34Pogzn9I3a7uTsNSlfs9Bdk.png"
+         style="width: 210px; height: 80px; border-radius: 8px; margin-bottom: 5px; background: #000000;" />
 </div>
 
 """, unsafe_allow_html=True)
