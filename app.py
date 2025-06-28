@@ -1,5 +1,5 @@
 import streamlit as st
-# --- STREAMLIT UI CONFIG (MUST BE FIRST) ---
+# --- STREAMLIT UI CONFIG ---
 st.set_page_config(
     page_title="SUTRA AI Friend Chatbot", 
     page_icon="",
@@ -7,7 +7,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- CUSTOM CSS MATCHING REFERENCE DESIGN ---
+# --- CUSTOM CSS DESIGN ---
 st.markdown("""
 <style>
     /* Import Google Fonts */
@@ -383,8 +383,6 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     
-    # REMOVED: API key warning to avoid scrolling issues
-    
     # Mem0 API Key input - Compact
     mem0_api_key = st.text_input(
         "MEM0 API Key (Optional)", 
@@ -628,7 +626,7 @@ def chat_with_sutra_agent(user_message):
 st.markdown(f"""
 <div class="main-title-container" style="background: #000000 !important;">
     <div style="background: #000000 !important; padding: 0; text-align: center;">
-    <img src="data:image/jpeg;base64,{base64.b64encode(open("logo_bg.png", "rb").read()).decode()}"
+    <img src="https://framerusercontent.com/images/9vH8BcjXKRcC5OrSfkohhSyDgX0.png"
          style="width: 200px; height: 200px; background: #000000 !important; border: none; border-radius: 0px; margin: 0 auto; display: block; box-shadow: none;" />
 </div>
 </div>
